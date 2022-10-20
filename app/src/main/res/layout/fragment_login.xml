@@ -27,28 +27,31 @@
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Email"
-        android:padding="25dp"
-        android:textSize="12dp"
+        android:hint=" Email"
+        android:textSize="17dp"
+        android:paddingStart="10dp"
+        android:drawableLeft="@drawable/email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
-        android:id="@+id/passwordText"
+        android:id="@+id/passwordText2"
         android:layout_width="315dp"
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="textPassword"
-        android:text="Password"
+        android:hint=" Password"
+        android:textSize="17dp"
+        android:paddingStart="10dp"
+        android:drawableLeft="@drawable/password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailText" />
 
     <Button
-        android:id="@+id/loginButton"
+        android:id="@+id/signUpButton"
         android:layout_width="120dp"
         android:layout_height="48dp"
         android:layout_marginTop="20dp"
@@ -57,7 +60,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordText" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordText2" />
 
     <TextView
         android:id="@+id/forgotPasswordTxt"
@@ -67,10 +70,10 @@
         android:text="Forgot password?"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginButton" />
+        app:layout_constraintTop_toBottomOf="@+id/signUpButton" />
 
     <TextView
-        android:id="@+id/dontHaveTxt"
+        android:id="@+id/alreadyTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Don't have an account?"
@@ -82,7 +85,7 @@
         app:layout_constraintVertical_bias="0.76" />
 
     <TextView
-        android:id="@+id/signUpTxt"
+        android:id="@+id/signInTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="7dp"
@@ -91,7 +94,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/dontHaveTxt"
+        app:layout_constraintStart_toEndOf="@+id/alreadyTxt"
         app:layout_constraintTop_toBottomOf="@+id/forgotPasswordTxt"
         app:layout_constraintVertical_bias="0.758" />
 
