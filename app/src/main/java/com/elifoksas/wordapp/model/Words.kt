@@ -1,3 +1,6 @@
 package com.elifoksas.wordapp.model
 
-data class Words()
+data class Words(
+
+    val word : String
+)

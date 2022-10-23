@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "877196818528",
+    "project_id": "wordbox-42216",
+    "storage_bucket": "wordbox-42216.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:877196818528:android:0bb34c407b0ed7600aeb05",
+        "android_client_info": {
+          "package_name": "com.elifoksas.wordapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "877196818528-hj7igflhpaqse4tkkmtd2prp1viq79pt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDR4Oc0r4QKd3luXv8RzCYSu8xqXXI4SG0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "877196818528-hj7igflhpaqse4tkkmtd2prp1viq79pt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

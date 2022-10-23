@@ -40,7 +40,7 @@
     </EditText>
 
     <EditText
-        android:id="@+id/emailText2"
+        android:id="@+id/signEmailText"
         android:layout_width="315dp"
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
@@ -56,7 +56,7 @@
         app:layout_constraintTop_toBottomOf="@+id/nameText" />
 
     <EditText
-        android:id="@+id/passwordText2"
+        android:id="@+id/signPasswordText"
         android:layout_width="315dp"
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
@@ -69,7 +69,7 @@
         android:paddingStart="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailText2" />
+        app:layout_constraintTop_toBottomOf="@+id/signEmailText" />
 
 
     <Button
@@ -82,7 +82,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordText2" />
+        app:layout_constraintTop_toBottomOf="@+id/signPasswordText" />
 
     <TextView
         android:id="@+id/alreadyTxt"
@@ -94,7 +94,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.457"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signUpButton"
+        app:layout_constraintTop_toBottomOf="@+id/loginButton"
         app:layout_constraintVertical_bias="0.992" />
 
     <TextView
@@ -109,7 +109,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.021"
         app:layout_constraintStart_toEndOf="@+id/alreadyTxt"
-        app:layout_constraintTop_toBottomOf="@+id/signUpButton"
+        app:layout_constraintTop_toBottomOf="@+id/loginButton"
         app:layout_constraintVertical_bias="0.985" />
 
 
