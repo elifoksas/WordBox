@@ -66,6 +66,7 @@
                 android:layout_gravity="center"
                 app:icon="@drawable/check"
                 app:iconGravity="textEnd"
+                app:iconTint="@color/darkText"
                 tools:ignore="SpeakableTextPresentCheck">
 
             </Button>
@@ -77,6 +78,7 @@
                 android:layout_gravity="center"
                 app:icon="@drawable/clear"
                 app:iconGravity="textEnd"
+                app:iconTint="@color/darkText"
                 tools:ignore="SpeakableTextPresentCheck">
 
             </Button>

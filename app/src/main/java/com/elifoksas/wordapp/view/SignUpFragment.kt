@@ -9,15 +9,21 @@ import android.view.ViewGroup
 import com.elifoksas.wordapp.R
 import com.elifoksas.wordapp.databinding.FragmentSignUpBinding
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 
 class SignUpFragment : Fragment() {
 
 
     private lateinit var binding: FragmentSignUpBinding
+    private lateinit var auth: FirebaseAuth
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        auth = FirebaseAuth.getInstance()
+
         arguments?.let {
 
         }
@@ -44,25 +50,20 @@ class SignUpFragment : Fragment() {
         val password = binding.signPasswordText.text.toString().trim()
 
 
-        if(email.isEmpty()){
-            binding.signEmailText.setError("Please enter your email.")
-            return
-        }
-        if (email.isBlank()){
-            binding.signEmailText.setError("Email cannot be empty.")
-        }
-        if(password.isEmpty()){
-            binding.signPasswordText.setError("Password cannot be empty.")
-            return
-        }
-        FirebaseAuth.getInstance().createUserWithEmailAndPassword(email,password)
-            .addOnCompleteListener {
-                Log.d("sign","sign oldu")
-                if (!it.isSuccessful) {
-                    return@addOnCompleteListener
+        if(email.isNotEmpty() && password.isNotEmpty()){
+
+            FirebaseAuth.getInstance().createUserWithEmailAndPassword(email,password)
+                .addOnCompleteListener {task->
+                    if (!task.isSuccessful) {
+                        Log.d("sign","sign oldu")
+                        val user = auth.currentUser
+                        return@addOnCompleteListener
+                    } else{
+                        Log.d("sign","sign olamadı")
+                    }
                 }
-            }.addOnFailureListener {
-                it.printStackTrace()
-            }
+
+        }
+
     }
 }
