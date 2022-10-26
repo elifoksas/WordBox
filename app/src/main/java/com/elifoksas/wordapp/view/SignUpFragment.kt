@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.elifoksas.wordapp.R
 import com.elifoksas.wordapp.databinding.FragmentSignUpBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -33,7 +34,7 @@ class SignUpFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.signUpButton.setOnClickListener{
             signUp()
-    }
+        }
     }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -49,21 +50,30 @@ class SignUpFragment : Fragment() {
         val email = binding.signEmailText.text.toString().trim()
         val password = binding.signPasswordText.text.toString().trim()
 
-
-        if(email.isNotEmpty() && password.isNotEmpty()){
-
-            FirebaseAuth.getInstance().createUserWithEmailAndPassword(email,password)
-                .addOnCompleteListener {task->
-                    if (!task.isSuccessful) {
-                        Log.d("sign","sign oldu")
-                        val user = auth.currentUser
-                        return@addOnCompleteListener
-                    } else{
-                        Log.d("sign","sign olamadı")
-                    }
-                }
-
+        if(email.isEmpty()){
+            binding.signEmailText.setError("Please enter your email")
+            return
         }
+        if(password.isEmpty()){
+            binding.signPasswordText.setError("Please enter your password")
+            return
+        }
+
+        FirebaseAuth.getInstance().createUserWithEmailAndPassword(email,password)
+            .addOnCompleteListener {task->
+                Log.d("sign","sign oldu")
+            }
+            .addOnFailureListener {
+                Log.d("sign",it.message.toString())
+            }
+            .addOnSuccessListener {
+                Log.d("sign" , it.user?.email.toString())
+            }
+            .addOnCanceledListener {
+                Log.d("sign" , "cancel")
+            }
+
+
 
     }
 }

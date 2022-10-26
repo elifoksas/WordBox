@@ -2,6 +2,7 @@ package com.elifoksas.wordapp.view
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -55,10 +56,17 @@ class LoginFragment : Fragment() {
             return
         }
         FirebaseAuth.getInstance().signInWithEmailAndPassword(email,password)
-            .addOnCompleteListener {
-                if (!it.isSuccessful) {
-                    return@addOnCompleteListener
-                }
+            .addOnCompleteListener { task->
+                Log.d("login","login oldu")
+            }
+            .addOnFailureListener {
+                Log.d("login",it.message.toString())
+            }
+            .addOnSuccessListener {
+                Log.d("login" , it.user?.email.toString())
+            }
+            .addOnCanceledListener {
+                Log.d("login" , "cancel")
             }
 
 
