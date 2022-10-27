@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.navigation.Navigation
 import com.elifoksas.wordapp.R
 import com.elifoksas.wordapp.databinding.FragmentLoginBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -31,6 +32,12 @@ class LoginFragment : Fragment() {
         binding.loginButton.setOnClickListener{
             Login()
         }
+
+        binding.signUpTxt.setOnClickListener {
+            val action = LoginFragmentDirections.actionLoginFragmentToSignUpFragment()
+            Navigation.findNavController(it).navigate(action)
+        }
+
 
 
     }
@@ -58,16 +65,24 @@ class LoginFragment : Fragment() {
         FirebaseAuth.getInstance().signInWithEmailAndPassword(email,password)
             .addOnCompleteListener { task->
                 Log.d("login","login oldu")
+
             }
-            .addOnFailureListener {
-                Log.d("login",it.message.toString())
+            .addOnFailureListener { exception ->
+                Toast.makeText(context,("Geçersiz Email Adresi"), Toast.LENGTH_LONG).show()
+                Log.d("login",exception.message.toString())
             }
             .addOnSuccessListener {
+
                 Log.d("login" , it.user?.email.toString())
+                val action = LoginFragmentDirections.actionLoginFragmentToWordsFragment()
+                view?.let { Navigation.findNavController(it).navigate(action) }
             }
             .addOnCanceledListener {
+                Toast.makeText(context,("Geçersiz Email Adresi"), Toast.LENGTH_LONG).show()
                 Log.d("login" , "cancel")
             }
+
+
 
 
 

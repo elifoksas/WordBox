@@ -12,6 +12,7 @@ import com.elifoksas.wordapp.databinding.FragmentSignUpBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import androidx.navigation.Navigation
 
 
 class SignUpFragment : Fragment() {
@@ -34,6 +35,11 @@ class SignUpFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.signUpButton.setOnClickListener{
             signUp()
+
+        }
+        binding.signInTxt.setOnClickListener {
+            val action = SignUpFragmentDirections.actionSignUpFragmentToLoginFragment()
+            Navigation.findNavController(it).navigate(action)
         }
     }
     override fun onCreateView(
@@ -62,16 +68,24 @@ class SignUpFragment : Fragment() {
         FirebaseAuth.getInstance().createUserWithEmailAndPassword(email,password)
             .addOnCompleteListener {task->
                 Log.d("sign","sign oldu")
+
             }
             .addOnFailureListener {
                 Log.d("sign",it.message.toString())
             }
             .addOnSuccessListener {
                 Log.d("sign" , it.user?.email.toString())
+                val action = SignUpFragmentDirections.actionSignUpFragmentToWordsFragment()
+                view?.let { Navigation.findNavController(it).navigate(action) }
             }
             .addOnCanceledListener {
                 Log.d("sign" , "cancel")
             }
+
+
+
+
+
 
 
 
