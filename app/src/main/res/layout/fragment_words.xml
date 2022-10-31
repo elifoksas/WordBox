@@ -11,7 +11,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/knowCV"
         android:layout_width="350dp"
-        android:layout_height="150dp"
+        android:layout_height="125dp"
         app:cardCornerRadius="15dp"
         android:layout_margin="25dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,7 +34,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/wordCV"
         android:layout_width="350dp"
-        android:layout_height="200dp"
+        android:layout_height="250dp"
         android:layout_margin="25dp"
         app:cardCornerRadius="15dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,10 +42,15 @@
         app:layout_constraintTop_toBottomOf="@+id/knowCV">
 
         <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:layout_margin="30dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
             android:orientation="vertical">
 
             <TextView
@@ -58,11 +63,23 @@
                 android:textSize="24sp">
 
             </TextView>
+
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/elma"
+                android:layout_gravity="center"
+                android:layout_margin="15dp">
 
             </ImageView>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/knowBtn"
@@ -72,7 +89,8 @@
                 app:icon="@drawable/check"
                 app:iconGravity="textEnd"
                 app:iconTint="@color/darkText"
-                tools:ignore="SpeakableTextPresentCheck">
+                tools:ignore="SpeakableTextPresentCheck"
+                android:layout_margin="10dp">
 
             </Button>
 
@@ -84,18 +102,21 @@
                 app:icon="@drawable/clear"
                 app:iconGravity="textEnd"
                 app:iconTint="@color/darkText"
-                tools:ignore="SpeakableTextPresentCheck">
+                tools:ignore="SpeakableTextPresentCheck"
+                android:layout_margin="10dp">
 
             </Button>
+
         </LinearLayout>
 
+        </LinearLayout>
 
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/dontKnowCV"
         android:layout_width="350dp"
-        android:layout_height="150dp"
+        android:layout_height="125dp"
         android:layout_margin="25dp"
         app:cardCornerRadius="15dp"
         app:layout_constraintEnd_toEndOf="parent"
