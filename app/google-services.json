@@ -1,33 +1,34 @@
 {
   "project_info": {
-    "project_number": "877196818528",
-    "project_id": "wordbox-42216",
-    "storage_bucket": "wordbox-42216.appspot.com"
+    "project_number": "888966817404",
+    "firebase_url": "https://wordapp-a9d59-default-rtdb.firebaseio.com",
+    "project_id": "wordapp-a9d59",
+    "storage_bucket": "wordapp-a9d59.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:877196818528:android:0bb34c407b0ed7600aeb05",
+        "mobilesdk_app_id": "1:888966817404:android:37ecf162bd10b3a3b14bf9",
         "android_client_info": {
           "package_name": "com.elifoksas.wordapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "877196818528-hj7igflhpaqse4tkkmtd2prp1viq79pt.apps.googleusercontent.com",
+          "client_id": "888966817404-ju88pvf7k5rhv4oko0h24j1ce40c8cg7.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDR4Oc0r4QKd3luXv8RzCYSu8xqXXI4SG0"
+          "current_key": "AIzaSyCJRGgnFff8sXFUHVzmt7dtlTpvqmW04jA"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "877196818528-hj7igflhpaqse4tkkmtd2prp1viq79pt.apps.googleusercontent.com",
+              "client_id": "888966817404-ju88pvf7k5rhv4oko0h24j1ce40c8cg7.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

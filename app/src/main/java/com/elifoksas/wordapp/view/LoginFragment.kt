@@ -68,17 +68,17 @@ class LoginFragment : Fragment() {
 
             }
             .addOnFailureListener { exception ->
-                Toast.makeText(context,("Geçersiz Email Adresi"), Toast.LENGTH_LONG).show()
+                Toast.makeText(context,("Giriş Başarısız"), Toast.LENGTH_LONG).show()
                 Log.d("login",exception.message.toString())
             }
             .addOnSuccessListener {
 
                 Log.d("login" , it.user?.email.toString())
-                val action = LoginFragmentDirections.actionLoginFragmentToWordsFragment()
-                view?.let { Navigation.findNavController(it).navigate(action) }
+                //val action = LoginFragmentDirections.actionLoginFragmentToWordsFragment()
+                //view?.let { Navigation.findNavController(it).navigate(action) }
             }
             .addOnCanceledListener {
-                Toast.makeText(context,("Geçersiz Email Adresi"), Toast.LENGTH_LONG).show()
+                Toast.makeText(context,("Giriş Başarısız."), Toast.LENGTH_LONG).show()
                 Log.d("login" , "cancel")
             }
 

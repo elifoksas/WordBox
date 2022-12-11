@@ -75,8 +75,8 @@ class SignUpFragment : Fragment() {
             }
             .addOnSuccessListener {
                 Log.d("sign" , it.user?.email.toString())
-                val action = SignUpFragmentDirections.actionSignUpFragmentToWordsFragment()
-                view?.let { Navigation.findNavController(it).navigate(action) }
+                //val action = SignUpFragmentDirections.actionSignUpFragmentToWordsFragment()
+                //view?.let { Navigation.findNavController(it).navigate(action) }
             }
             .addOnCanceledListener {
                 Log.d("sign" , "cancel")

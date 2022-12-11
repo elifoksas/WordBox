@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/loginFragment">
+    app:startDestination="@id/categoriesFragment">
 
     <fragment
         android:id="@+id/loginFragment"
@@ -33,5 +33,23 @@
         android:id="@+id/wordsFragment"
         android:name="com.elifoksas.wordapp.view.WordsFragment"
         android:label="fragment_words"
-        tools:layout="@layout/fragment_words" />
+        tools:layout="@layout/fragment_words" >
+        <argument
+            android:name="categoryid"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoriesFragment"
+        android:name="com.elifoksas.wordapp.view.CategoriesFragment"
+        android:label="fragment_categories"
+        tools:layout="@layout/fragment_categories" >
+        <action
+            android:id="@+id/action_categoriesFragment_to_wordsFragment"
+            app:destination="@id/wordsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/test"
+        android:name="com.elifoksas.wordapp.view.test"
+        android:label="fragment_test"
+        tools:layout="@layout/fragment_test" />
 </navigation>
