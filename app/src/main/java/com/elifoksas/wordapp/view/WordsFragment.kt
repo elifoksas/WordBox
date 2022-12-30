@@ -76,6 +76,19 @@ class WordsFragment : Fragment(), TextToSpeech.OnInitListener {
             if (categoryid==8){
                 categoryName = "body parts"
             }
+            if (categoryid==9){
+                categoryName = "days of the week"
+            }
+            if (categoryid==10){
+                categoryName = "school"
+            }
+            if (categoryid==11){
+                categoryName = "jobs"
+            }
+            if (categoryid==12){
+                categoryName = "electronics"
+            }
+
             Log.d("categoryname",categoryName.toString())
 
             wordList.clear()
@@ -129,7 +142,7 @@ class WordsFragment : Fragment(), TextToSpeech.OnInitListener {
 
                     count++
 
-                    binding.leftBtn.visibility = View.VISIBLE
+                    //binding.leftBtn.visibility = View.VISIBLE
                     Picasso.get().load(wordList[count].imageUrl).into(binding.wordImage)
                     binding.wordTxt.text = wordList[count].word
 

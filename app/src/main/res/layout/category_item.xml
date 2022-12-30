@@ -22,13 +22,15 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_gravity="center"
-            android:src="@mipmap/ic_launcher" />
+            android:src="@mipmap/ic_launcher"
+            android:padding="5dp"/>
 
         <TextView
             android:id="@+id/categoryName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/app_name"
+            android:textSize="20sp"
             android:textAlignment="center" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>

@@ -41,9 +41,8 @@ class test : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.button.setOnClickListener {
 
-            val test = Words("Cherry","https://cdn-icons-png.flaticon.com/512/3137/3137038.png")
-
-            FirebaseDatabase.getInstance().getReference("fruits/3").setValue(test).addOnSuccessListener { Log.d("frbs","true") }.addOnFailureListener {Log.d("frbs",it.message.toString()) }
+            val test = Words("Eye","https://cdn-icons-png.flaticon.com/512/4615/4615602.png")
+            FirebaseDatabase.getInstance().getReference("bodyparts/1").setValue(test).addOnSuccessListener { Log.d("frbs","true") }.addOnFailureListener {Log.d("frbs",it.message.toString()) }
 
 
         }

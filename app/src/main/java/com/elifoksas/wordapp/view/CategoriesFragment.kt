@@ -45,16 +45,20 @@ class CategoriesFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val gridView = binding.categoryGridVW
 
-        categoryList.add(Categories(1,"alphabet","https://cdn.shopify.com/s/files/1/1278/1015/products/curious-columbus-abc-sensory-learning-felt-alphabet-flashcard-set-lowercase-curious-columbus-the-creative-toy-shop-3.jpg?v=1603821989"))
-        categoryList.add(Categories(2,"numbers","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcGOTDc958t_SM2dOoZ3eEWG9u73eyOtSfUw&usqp=CAU"))
-        categoryList.add(Categories(3,"colors","https://i0.wp.com/www.adams.es/blogs/alumno/files/2019/04/portada-colores-ok.jpg?fit=1000%2C667&ssl=1"))
-        categoryList.add(Categories(4,"shapes","https://img.freepik.com/premium-vector/cartoon-shapes-kid-isolated-white_6997-2067.jpg?w=2000"))
-        categoryList.add(Categories(5,"fruits","https://img.freepik.com/premium-vector/set-fruits-cartoon-style-illustration_313437-80.jpg?w=2000"))
-        categoryList.add(Categories(6,"vegetables","https://img.freepik.com/premium-vector/pile-fresh-cartoon-vegetables_267448-186.jpg?w=2000"))
-        categoryList.add(Categories(7,"animals","https://cdn.pixabay.com/photo/2021/07/06/17/05/animals-6392131_960_720.png"))
-        categoryList.add(Categories(8,"food","https://media.istockphoto.com/id/477338550/vector/fast-food-cartoon-set.jpg?s=612x612&w=0&k=20&c=43d4dJfLkT0b70VLW61a-H1svzcKZqHRnD9z9pyqkCY="))
-        categoryList.add(Categories(9,"animals","https://i.pinimg.com/736x/49/94/84/499484164d0c0d44242d205f3b08bb6b.jpg"))
-        categoryList.add(Categories(10,"days of the week","https://static.vecteezy.com/system/resources/thumbnails/000/302/050/small/3i78_7g6x_140704.jpg"))
+        categoryList.add(Categories(1,"alphabet","https://cdn-icons-png.flaticon.com/512/709/709418.png"))
+        categoryList.add(Categories(2,"numbers","https://cdn-icons-png.flaticon.com/512/709/709388.png"))
+        categoryList.add(Categories(3,"colors","https://cdn-icons-png.flaticon.com/512/2071/2071524.png"))
+        categoryList.add(Categories(4,"shapes","https://cdn-icons-png.flaticon.com/512/2059/2059337.png"))
+        categoryList.add(Categories(5,"fruits","https://cdn-icons-png.flaticon.com/512/3194/3194591.png"))
+        categoryList.add(Categories(6,"vegetables","https://cdn-icons-png.flaticon.com/512/1147/1147934.png"))
+        categoryList.add(Categories(7,"animals","https://cdn-icons-png.flaticon.com/512/5312/5312801.png"))
+        categoryList.add(Categories(8,"body parts","https://cdn-icons-png.flaticon.com/512/4178/4178727.png"))
+        categoryList.add(Categories(9,"days of the week","https://cdn-icons-png.flaticon.com/512/4345/4345649.png"))
+        categoryList.add(Categories(10,"school","https://cdn-icons-png.flaticon.com/512/1373/1373058.png"))
+        categoryList.add(Categories(11,"jobs","https://cdn-icons-png.flaticon.com/512/4532/4532490.png"))
+        categoryList.add(Categories(12,"electronics","https://cdn-icons-png.flaticon.com/512/1261/1261143.png"))
+
+
 
         val adapter = this.context?.let { CategoryAdapter(it,categoryList) }
         gridView.adapter = adapter
